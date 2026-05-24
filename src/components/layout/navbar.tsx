@@ -8,9 +8,10 @@ import { Button } from "@/components/ui/button";
 
 const navigation = [
     { name: "Inicio", href: "/" },
-    { name: "Catálogo", href: "#catalog" },
     { name: "Servicios", href: "#services" },
-    { name: "Nosotros", href: "#about" },
+    { name: "Ejemplos", href: "#examples" },
+    { name: "IA y capacitación", href: "#ai" },
+    { name: "Implementación", href: "#implementation" },
     { name: "Contacto", href: "#contact" },
 ];
 
@@ -18,7 +19,7 @@ export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
     return (
-        <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
             <nav className="container flex h-16 items-center justify-between px-4 md:px-8 mx-auto max-w-7xl">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
@@ -56,7 +57,9 @@ export function Navbar() {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Button>Cotizar</Button>
+                    <Button asChild>
+                        <Link href="#contact">Agendar diagnóstico</Link>
+                    </Button>
                 </div>
             </nav>
             {/* Mobile menu */}
@@ -96,7 +99,11 @@ export function Navbar() {
                             ))}
                         </div>
                         <div className="py-6">
-                            <Button className="w-full">Cotizar</Button>
+                            <Button className="w-full" asChild>
+                                <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+                                    Agendar diagnóstico
+                                </Link>
+                            </Button>
                         </div>
                     </div>
                 </div>

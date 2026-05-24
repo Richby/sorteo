@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 export const metadata: Metadata = {
-  title: "Softec Platform",
-  description: "High-performance digital platform for Softec",
+  title: "Softec Technologies | Soluciones digitales, IA e infraestructura",
+  description:
+    "Implementamos flujos operativos, sitios web, soluciones con IA e infraestructura tecnológica para empresas.",
 };
 
 export default function RootLayout({
@@ -20,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased flex flex-col min-h-screen`}>
+    <html lang="es">
+      <body className="font-sans antialiased flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

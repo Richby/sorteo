@@ -2,23 +2,20 @@ import Link from "next/link";
 
 const navigation = {
     solutions: [
-        { name: "Automatización", href: "#" },
-        { name: "Infraestructura", href: "#" },
-        { name: "Hardware", href: "#" },
-        { name: "Consultoría", href: "#" },
+        { name: "Flujos operativos", href: "#services" },
+        { name: "Desarrollo web", href: "#services" },
+        { name: "IA y capacitación", href: "#ai" },
+        { name: "Infraestructura", href: "#implementation" },
     ],
     support: [
-        { name: "Precios", href: "#" },
-        { name: "Documentación", href: "#" },
-        { name: "Guías", href: "#" },
-        { name: "Estado API", href: "#" },
+        { name: "Diagnóstico", href: "#contact" },
+        { name: "Capacitación", href: "#ai" },
+        { name: "Soporte técnico", href: "#implementation" },
+        { name: "Ejemplos", href: "#examples" },
     ],
     company: [
-        { name: "Nosotros", href: "#" },
-        { name: "Blog", href: "#" },
-        { name: "Empleo", href: "#" },
-        { name: "Prensa", href: "#" },
-        { name: "Socios", href: "#" },
+        { name: "Servicios", href: "#services" },
+        { name: "Contacto", href: "#contact" },
     ],
     legal: [
         { name: "Reclamos", href: "#" },
@@ -29,11 +26,13 @@ const navigation = {
 
 export function Footer() {
     return (
-        <footer className="bg-secondary text-secondary-foreground" aria-labelledby="footer-heading">
+        <footer className="relative overflow-hidden border-t border-white/10 bg-[#030712] text-secondary-foreground" aria-labelledby="footer-heading">
+            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
+            <div className="absolute -right-32 top-0 h-72 w-72 rounded-full bg-sky-500/10 blur-3xl" />
             <h2 id="footer-heading" className="sr-only">
                 Pie de página
             </h2>
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
+            <div className="relative z-10 mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8">
                         <div className="flex items-center gap-2">
@@ -45,7 +44,7 @@ export function Footer() {
                             </span>
                         </div>
                         <p className="text-sm leading-6 text-gray-300">
-                            Empoderando empresas con automatización de vanguardia e infraestructura tecnológica.
+                            Implementamos software, flujos operativos, IA e infraestructura para empresas que necesitan operar mejor.
                         </p>
                         <div className="flex space-x-6">
                             {/* Social links would go here */}
